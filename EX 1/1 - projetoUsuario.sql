@@ -1,18 +1,15 @@
 USE projetoUsuario
 
---INSERT INTO users (name, username, password, email) VALUES
---('Joao', 'Ti_joao', '123mudar', 'joao@empresa.com')
+INSERT INTO users (name, username, password, email) VALUES
+('Joao', 'Ti_joao', '123mudar', 'joao@empresa.com')
 
---INSERT INTO projects(name, description, date) VALUES
---('Atualização de Sistemas', 'Modificação de Sistemas Operacionais nos PC`s', '2014-09-12')
+INSERT INTO projects(name, description, date) VALUES
+('Atualização de Sistemas', 'Modificação de Sistemas Operacionais nos PC`s', '2014-09-12')
 
-SELECT * FROM users
-SELECT * FROM users_has_projects
-SELECT * FROM projects
-
-
---1) Id, Name e Email de Users, Id, Name, Description e Data de Projects, dos usuários que
--- participaram do projeto Name Re-folha
+/*
+1) Id, Name e Email de Users, Id, Name, Description e Data de Projects, dos usuários que
+participaram do projeto Name Re-folha
+*/
 
 SELECT u.id, u.name, u.email, p.id, p.name AS project_name, p.description, p.date
 FROM users u INNER JOIN users_has_projects uhp
